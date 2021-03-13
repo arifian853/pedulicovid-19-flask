@@ -1,0 +1,186 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>#PeduliCovid-19</title>
+{% endblock %}
+
+{% block body %}
+  <section class="data-section">
+    <div class="data">
+      <h1 align="center" id="big-title" data-aos="">DATA KASUS COVID-19</h1>
+      <br/>
+      <div class="container-dunia" data-aos="fade-down">
+        <p class="title-kasus">Jumlah Kasus di Seluruh Dunia</p>
+        <p class="world-case">{{dataDunia.cases}}</p>
+      </div>
+      <br/>
+      <div class="container-data">
+        <div class="row">
+          <div class="col-sm py-2" data-aos="fade-right">
+            <p class="title-kasus">Total kasus di Indonesia</p>
+            <p class="col py-1 case-id total-data">{{data.positif}}</p>
+          </div>
+          <div class="col-sm py-2" data-aos="fade-left">
+            <p class="title-kasus">Total pasien meninggal di Indonesia</p> 
+            <p class="col py-1 dead-id total-data">{{data.meninggal}}</p>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-sm py-2" data-aos="fade-right">
+            <p class="title-kasus">Total pasien sembuh di Indonesia</p>
+            <p class="col py-1 recover-id total-data">{{data.sembuh}}</p>
+          </div>
+          <div class="col-sm py-2" data-aos="fade-left">
+            <p class="title-kasus">Total pasien dalam perawatan di Indonesia</p> 
+            <p class="col py-1 treated-id total-data">{{data.dirawat}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="protokol-kesehatan" id="protokol-kesehatan">
+    <div class="content-container">
+      <h1 id="title" align="center">PROTOKOL KESEHATAN</h1>
+      <h2 id="sub-title">DISIPLIN <span>3M</span></h2>
+      <div class="disiplin-3m-container" id="left" >
+        <div class="disiplin-3m" data-aos="zoom-in">
+          <img src="{{url_for('static', filename='img/wash.png')}}" alt="">
+          <p>MENCUCI <span>TANGAN</span></p>
+        </div>
+        <div class="disiplin-3m" data-aos="zoom-in">
+          <img src="{{url_for('static', filename='img/mask.png')}}" alt="">
+          <p>MEMAKAI <span>MASKER</span></p>
+        </div>
+        <div  class="disiplin-3m" id="right" data-aos="zoom-in">
+          <img src="{{url_for('static', filename='img/distance.png')}}" alt="">
+          <p>MENJAGA <span>JARAK</span></p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <section class="sejarah-pandemi" id="sejarah-pandemi">
+      <h1 id="title" align="center">SEJARAH PANDEMI</h1>
+      <div class="content-container" align="center">
+        <div class="card-sejarah" data-aos="fade-right">
+          <img src="{{url_for('static', filename='img/black-death.jfif')}}" alt="">
+          <h2>1. Black Death</h2>
+          <p><i>The Black Death </i>atau disebut sebagai Maut Hitam di Eropa tahun 1300-an. Diperkirakan sepertiga-dua pertiga populasi Eropa (75-200 juta orang) terserang wabah ini, serta berhasil meluas ke Asia dan Timur Tengah. </p>
+          <a href="https://www.britannica.com/event/Black-Death">Sumber Gambar</a>
+        </div>
+        <div class="card-sejarah" data-aos="fade-right">
+          <img src="{{url_for('static', filename='img/kolera.jpg')}}" alt="">
+          <h2>2. Kolera</h2>
+          <p>Kolera, yang disebabkan oleh bakteri Vibrio cholera dan menyerang saluran pencernaan. Berawal dari India tahun 1816, penyakit ini menyebabkan tujuh periode pandemi sampai ke Uni Soviet tahun 1966.</p>
+          <a href="https://www.halodoc.com/artikel/waspada-ini-komplikasi-yang-dapat-terjadi-karena-kolera">Sumber Gambar</a>
+        </div>
+        <div class="card-sejarah" data-aos="fade-right">
+          <img src="{{url_for('static', filename='img/spanish.jpg')}}" alt="">
+          <h2>3. Flu Spanyol</h2>
+          <p>Flu Spanyol, adalah pandemi influenza yang sangat mematikan yang disebabkan oleh virus influenza A subtipe H1N1. Virus ini menjangkiti sekitar 500 juta orang (sepertiga dari populasi dunia pada saat itu) dalam empat gelombang berturut-turut dari Februari 1918 hingga April 1920.</p>
+          <a href="https://en.wikipedia.org/wiki/Spanish_flu">Sumber Gambar</a>
+        </div>
+        <div class="card-sejarah" data-aos="fade-right">
+          <img src="{{url_for('static', filename='img/covid.jpg')}}" alt="">
+          <h2>4. Covid-19</h2>
+          <p>COVID-19, adalah wabah yang diidentifikasi pertama kali di sekitar Wuhan, Republik Rakyat Tiongkok pada akhir tahun 2019. COVID-19 memiliki gejala seperti penyakit demam dan penyakit pernapasan dan saat ini telah ada 100 juta lebih kasus di seluruh dunia (Februari 2021).</p>
+          <a href="https://www.bbc.com/indonesia/majalah-54640391">Sumber Gambar</a>
+        </div>
+      </div>
+  </section>
+<section class="new-normal" id="new-normal">
+  <div class="side">
+    <h1 id="title" align="center">NEW NORMAL</h1>
+    <img src="{{url_for('static', filename='img/people.png')}}" alt="" data-aos="zoom-in">
+  </div>
+  <div class="content-container" data-aos="fade">
+    <p><i>New normal</i> atau disebut juga sebagai Kebiasaan Baru / Normal Baru adalah perubahan perilaku atau pola hidup baru yang harus dilakukan masyarakat yang terdampak pandemi agar tetap dapat menjalani aktivitas normal seperti sebelum terjadi pandemi tetapi dengan beberapa aturan dan ketentuan kesehatan yang ketat. Hal ini dapat dilakukan setelah pemberlakuan pembatasan sosial berskala besar (PSBB) dalam mencegah penularan wabah COVID-19 yang masih berlangsung. <i>New normal</i> dilakukan sebagai upaya mitigasi dan kesiapan untuk warga yang harus beraktivitas di luar rumah seoptimal mungkin, sehingga dapat beradaptasi dalam menjalani perubahan perilaku yang baru. Perubahan pola hidup ini dibarengi dengan menjalani protokol kesehatan sebagai pencegahan virus COVID-19.</p></p>
+  </div>  
+</section>
+<section class="peran-masyarakat" id="peran-masyarakat">
+  <h1 id="title" align="center">PERAN MASYARAKAT</h1>
+  <img id="mobile" src="{{url_for('static', filename='img/health.png')}}" alt="" data-aos="fade-left">
+  <div class="content-container">
+    <img id="desktop" src="{{url_for('static', filename='img/health.png')}}" alt="" >
+    <ol data-aos="fade">
+      <p>Upaya yang dapat dilakukan sebagai masyarakat untuk turut menekan angka infeksi :</p>
+      <li>Selalu gunakan masker jika keluar rumah</li>
+      <li>Selalu mencuci tangan ketika berpergian dan pulang dari berpergian dan membawa hand sanitizer</li>
+      <li>Melakukan penjarakan fisik dengan tidak berkumpul – kumpul dan tidak mengadakan acara yang mengundang ramai orang</li>
+      <li>Tidak berpergian jauh antar kota atau ke luar negeri.</li>
+      <li>Membawa alat ibadah sendiri jika ke tempat ibadah.</li>
+      <li>Tidak menaiki angkutan umum atau transportasi massal.</li>
+      <li>Mengikuti etika batuk dan bersin yang benar.</li>
+    </ol>
+  </div>
+</section>
+<section class="tentang-halaman" id="tentang">
+  <div class="content-container">
+        <h3 class="text-light" align="center"><b>TENTANG KAMI</b></h3>
+        <p class="text-light" align="center"> Kami adalah 3 orang mahasiswa yang baru saja memasuki jenjang universitas pada tahun 2020 lalu.</p>
+        <br /> 
+        <div class="text-light row spacing">
+        <div class="card column" data-aos="fade-up">
+            <br />
+            <p align="center"><img class="img-profile" src="{{url_for('static', filename='img/arifian.jpg')}}"></p>
+            <br />
+            <h4 class="name-institutions">Arifian Saputra <br> </h4>
+            <p class="title">Mahasiswa</p>
+            <p class="role">Web Designer</p>
+            <p class="name-institutions">Universitas Maritim Raja Ali Haji</p>
+            <div class="row media-social">
+                <a class="med-soc column" href="https://www.instagram.com/arifiansaputra_/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a class="med-soc column" href="https://twitter.com/ArifianSaputra1" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a class="med-soc column" href="https://www.linkedin.com/in/arifian-saputra-08135a178/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a class="med-soc column" href="https://www.facebook.com/arifian.syaputra.9/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+            <br />
+            <a class="e-mail" href="mailto:arifiansaputra43@gmail.com"><p><button class="contact-button">Contact</button></p></a>
+          </div>
+          <br />
+          <br />
+          <div class="card column" data-aos="fade-up">
+            <br />
+            <p align="center"><img class="img-profile" src="{{url_for('static', filename='img/felix.png')}}"></p>
+            <br />
+            <h4 class="name-institutions">Felix <br> Fernando</h4>
+            <p class="title">Mahasiswa</p>
+            <p class="role">Web Designer</p>
+            <p class="name-institutions">Institut Teknologi Bandung</p>
+            <div class="row media-social">
+                <a class="med-soc column" href="https://www.instagram.com/felixfern_/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a class="med-soc column" href="https://twitter.com/felixfern__" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a class="med-soc column" href="https://www.linkedin.com/in/felix-fernando-8974061b9/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a class="med-soc column" href="https://www.facebook.com/felix.fernando12348/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+            <br />
+            <a class="e-mail" href="mailto:felixzhuang12348@gmail.com"><p><button class="contact-button">Contact</button></p></a>
+          </div>
+          <br />
+          <br />
+          <div class="card column" data-aos="fade-up">
+            <br />
+            <p align="center"><img class="img-profile" src="{{url_for('static', filename='img/shania.jpg')}}"></p>
+            <br />
+            <h4 class="name-institutions">Sha Nia Siahaan</h4>
+            <p class="title">Mahasiswa</p>
+            <p class="role">UI/UX Designer</p>
+            <p class="name-institutions">Universitas Maritim Raja Ali Haji</p>
+            <div class="row media-social">
+                <a class="med-soc column" href="https://www.instagram.com/shania.shn/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a class="med-soc column" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="med-soc column" href="https://www.linkedin.com/in/sha-nia-siahaan-858a481a5" target="_blank" ><i class="fa fa-linkedin"></i></a>
+                <a class="med-soc column" href="https://www.facebook.com/sha.nia.39501" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+            <br />
+            <a class="e-mail" href="mailto:shaniashn76@gmail.com"><p><button class="contact-button">Contact</button></p></a>
+          </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer text-light">
+  <img src="{{url_for('static', filename='img/logo_web.svg')}}" alt="">
+  <p align="center">Copyright © #PeduliCOVID Team 2021 , Re - Cloud ID Challenge | Arifian Saputra , Felix Fernando , Sha Nia Siahaan</p>
+</footer>
+
+{% endblock %}

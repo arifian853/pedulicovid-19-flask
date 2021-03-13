@@ -1,0 +1,715 @@
+/* 
+Warna :
+#040438
+#0C0C51
+#241860
+#612E76
+#7B3994
+#FF8748
+#00B8E2
+*/
+
+body, html {
+    font-family: 'Maven Pro', sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    position: relative;
+    background-image: linear-gradient(180deg, #040438, #5B1258);
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-track {
+    background: #040438;
+}
+body::-webkit-scrollbar-thumb {
+    background: #7C3DA7;
+}
+/* Navigation Bar */
+.navbar {
+    z-index: 2;
+}
+.navbar-brand {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.navbar li {
+    font-size: 90%;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 7px;
+    padding: 0
+}
+.navbar .link-0 a:hover {
+    color: #00B8E2 ;
+    text-decoration: none;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    padding : 10px;
+    background-color: #5B1258;
+    box-shadow: -1px -7px 28px -10px rgba(0,0,0,0.75);
+    display: flex;
+}
+.footer img {
+    width: 25%
+}
+img.img-logo-navbar {
+    width : 130px;
+    height : auto;
+}
+.quiz {
+    background-color: #00B8E2 ;
+    border-radius: 10px;
+}
+
+/* index.html */
+section {
+    scroll-snap-align: start;
+}
+
+/* Data Covid*/
+.data-section {
+    font-family: 'Poppins', sans-serif;
+    margin-top: -15vh;
+    margin-bottom: 0.1;
+    align-content: center;
+    width: 100%;
+    height: 101vh;
+    padding-top: 20vh;
+    z-index: 1;
+    background-image: linear-gradient(180deg, #040438, #5B1258);
+}
+.data #big-title {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 50px;
+}
+.data-covid {   
+    background-color: #00B8E2;
+}
+.container-dunia {
+    width: 80%;
+    margin: 0 auto;
+}
+.container-data {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+.world-case {
+    color: white;
+    font-size: 250%;
+    letter-spacing: 10px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #038DBC;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+}
+.title-kasus {
+    color: white;
+    margin-bottom: 5px ;
+}
+.total-data { 
+    font-size: 250%;
+    letter-spacing: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+.case-id {
+    background-color: #7C3DA7;
+    color: white;
+    border-radius: 5px;
+}
+.dead-id {
+    background-color: #C9516D;
+    color: white;
+    border-radius: 5px;
+}
+.recover-id{
+    background-color: #258A8E;
+    color: white;
+    border-radius: 5px;
+}
+.treated-id{
+    background-color: #BD654E;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Protokol Kesehatan*/
+.protokol-kesehatan {
+    height: auto;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    align-content: center;
+    background-color:#6d166a;
+    box-shadow: -1px -7px 28px -10px rgba(0,0,0,0.75);
+}
+.protokol-kesehatan h1 { 
+    margin-top: -10px;
+    font-size: 55px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.protokol-kesehatan h2 {
+    color: #00B8E2 ;
+    font-size: 40px;
+    font-weight: 700;
+}
+.protokol-kesehatan h2 span {
+    color: white ;
+}
+.disiplin-3m-container { 
+    display: inline-flex;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+.disiplin-3m img {
+    width: 60%;
+}
+.disiplin-3m p {
+    color: white;
+    font-weight: 600;
+    margin-top: -20px;
+    font-size: 35px;
+}
+.disiplin-3m span {
+    color: #00B8E2;
+}
+.disiplin-3m #right{
+    margin-right: 50px;
+}
+
+/* Sejarah Pandemi */
+.sejarah-pandemi {
+    width: 100%;
+    background-color: #5B1258;
+    box-shadow: -1px -7px 28px -10px rgba(0,0,0,0.75);
+    padding-top: 30px;
+    text-align: center;
+    align-content: center;
+}
+.sejarah-pandemi h1 { 
+    font-size: 50px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.sejarah-pandemi .content-container {
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    display: flex;
+}
+.card-sejarah {
+    width: 25%;
+    height: auto;
+    background-color: #C9516D;
+    border-radius: 10px;
+    margin: 0 20px 0 20px;
+    box-shadow: 6px 10px 27px -12px rgba(0,0,0,0.75);
+    margin-top: -20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    animation: slide-down;
+    animation-duration: .5s;
+}
+.card-sejarah:hover {
+    animation: slide-up;
+    animation-duration: .5s;
+    transform: translateY(-20px);
+}
+.card-sejarah a {
+    bottom: 0;
+    color: white;
+    background-color: #ca3e5f;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+.card-sejarah a:hover { 
+    opacity: .8;
+}
+.card-sejarah img {
+    margin : 0;
+    width: 100%;
+    height: 30%;
+}
+.card-sejarah h2 { 
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+}
+.card-sejarah p {
+    text-align: justify;
+    color: white;
+    width: 80%;
+    height: 50%;
+}
+/* Animation */
+@keyframes slide-up {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes slide-down {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(-0px);
+    }
+}
+
+/* New Normal */
+.new-normal {
+    background-color: #6d166a;
+    height: auto;
+    box-shadow: -1px -7px 28px -10px rgba(0,0,0,0.75);
+    display: flex;
+}
+.new-normal .side {
+    width: 35%;
+    height: 100%;
+    text-align: center;
+    background-color: #881d84;
+    margin: 0;
+    box-shadow: 6px 0px 5px -6px rgba(0,0,0,0.75);
+    padding-bottom: 20px;
+}
+.new-normal .side h1 { 
+    font-size: 50px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.new-normal .side img {
+    width: 50%;
+    margin-top: 0px;
+}
+.new-normal .content-container {
+    margin-top: -20px;
+    width: 100%;
+}
+.new-normal .content-container p {
+    text-align: justify;
+    color: white;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+}
+
+/* Peran Masyarakat */
+.peran-masyarakat {
+    background-color: #5B1258;
+    box-shadow: -1px -7px 28px -10px rgba(0,0,0,0.75);
+    padding-top: 30px;
+    height: auto;
+}
+.peran-masyarakat .content-container {
+    display: flex;
+    margin: 0 auto;
+}
+.peran-masyarakat h1 { 
+    font-size: 50px;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.peran-masyarakat img {
+    width: 20%;
+    margin-left: -20px;
+}
+.peran-masyarakat ol {
+    margin-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 500;
+    background-color:  #751772;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+.peran-masyarakat #mobile {
+    display: none;
+}
+.peran-masyarakat #desktop {
+    display: inline;
+}
+
+/* Tentang */
+.tentang-halaman {
+    padding: 12px;
+    box-shadow: -1px -7px 28px -10px rgba(0,0,0,0.75);
+    background-color: #881d84;
+}
+
+.about-bg {
+    border-radius: 12px;
+    width: 100%;
+    height: 50%;
+}
+.content-container {
+    width: 100%;
+    padding: 60px;
+}
+/* quiz.html */
+.title-question {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.question-box {
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #00B8E2;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    box-shadow: 6px 10px 27px -12px rgba(0,0,0,0.75);
+}
+.question-box #no-soal {
+    color: #241860;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 500;
+}
+.question-box #question {
+    color: #241860;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -10px;
+}
+.question-box #multiple-choice {
+    margin-top: 15px;
+}
+.multiple-choice {
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.multiple-choice #grid-mc {
+    display: grid;
+    grid-row: auto auto;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 2%;
+    grid-row-gap: 10% ;
+}
+.multiple-choice label {
+    color: white;
+    font-weight: 500;
+    background-color: #A851C9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 6px 10px 27px -12px rgba(0,0,0,0.75);
+}
+.multiple-choice label:hover {
+    background-color: #64df75;
+}
+.multiple-choice input[type="radio"] {
+    display: inline-flex;
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.multiple-choice input[type="radio"]:checked + label {
+    background-color: #64df75;
+}
+.multiple-choice input[type="radio"]:focus + label{
+    background-color: #64df75;
+}
+.multiple-choice #next {
+    border-radius: 10px;
+    background-color: #FF8748;
+    margin-top: 30px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    color: white;
+}
+.multiple-choice #next:hover {
+    opacity: .9;
+}
+
+.result {
+    width: 80%;
+    border-radius: 10px;
+    background-color: #7C3DA7;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.result p {
+    margin-left: 10px;
+    color: white;
+    display: inline;
+}
+
+.hasil {
+    width: 80%;
+    border-radius: 25px;
+    background-color: #241860;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: white
+}
+.hasil-nilai {
+    color: white
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    body, html {
+        scroll-behavior: none;
+        scroll-snap-type: none;
+    }
+    .img-logo-navbar {
+        width: 5px;
+        height: auto;
+    }
+    .data {
+        margin-top: 10px;
+    }
+    .data #big-title {
+        font-size: 25px;
+    }
+    .world-case {
+        font-size: 20px;
+    }
+    .total-data {
+        font-size: 20px;
+    }
+    .container-data {
+        margin-top: -20px
+    }
+    .container-data div {
+        margin-top: -25px;
+    }
+    .title-kasus {
+        font-size: 15px;
+    }
+    .protokol-kesehatan h1 { 
+        font-size: 25px;
+        margin-top: -30px;
+        text-align: center;
+    }
+    .protokol-kesehatan h2 {
+        font-size: 20px;
+        margin-top: -10px;
+    }
+    .disiplin-3m p {
+        font-size: 15px;
+        margin-top: -10px;
+    }
+    .disiplin-3m-container { 
+        display: inline;
+    }
+    .disiplin-3m img {
+        width: 80%;
+    }
+    .navbar {
+        height: 15vh;
+        background-color:  #241860;
+    }
+    .nav-item-bg-dr {
+        background: #241860;
+        padding: 12px;
+    }
+    .spacing {
+        padding: 25px;
+    }
+
+    /* Sejarah Pandemi */
+    .sejarah-pandemi .content-container {
+        width: 100%;
+        height: 100%;
+        margin-top: -20px;
+        display: inline;
+    }
+    .sejarah-pandemi h1 { 
+        font-size: 25px;
+        color: white;
+        letter-spacing: 10px;
+        font-weight: bold;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto
+    }
+    .card-sejarah {
+        width: 80%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .card-sejarah h2 {
+        font-size: 20px;
+    }
+    .card-sejarah p {
+        font-size: 15px;
+    }
+
+    /* New Normal */
+    .new-normal {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+    .new-normal .side { 
+        width: 100%;
+        margin-top: 0;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .new-normal .side #title {
+        font-size: 25px;
+    }
+    .new-normal .content-container {
+        width: 100%;
+    }
+    .new-normal .content-container p {
+        font-size: 16px;
+    }
+    /* Peran Masyarakat */
+    .peran-masyarakat {
+        margin: 0;
+        text-align: center;
+    }
+    .peran-masyarakat .content-container{
+        width: 100%;
+        margin-top: -20px;
+    }
+    .peran-masyarakat #title { 
+        font-size: 25px;
+    }
+    .peran-masyarakat ol {
+        text-align: justify;
+        font-size: 16px;
+        margin: 0;
+        padding-bottom: 10px;
+        margin-top: -10px;
+    }
+    .peran-masyarakat #mobile {
+        display: inline;
+        align-self: center;
+    }
+    .peran-masyarakat #desktop {
+        display: none;
+    }
+    .peran-masyarakat img {
+        width: 50%;
+        margin-left: 0px;
+    }
+    .footer {
+        height: auto;
+    }
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+	.navbar .nav-item:hover .nav-link{ color: #00B8E2; }
+	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+	.navbar .dropdown-menu.fade-up{ top:180%;  }
+	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+}		
+
+.about {
+    padding: 10px;
+    margin: 45px;
+    background-color: #241860;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    max-width: 275px;
+    margin: auto;
+    text-align: center;
+    background-color:#FF8748;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.title {
+    color:black;
+    font-size: 18px;
+}
+.contact-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 70%;
+    font-size: 18px;
+    border-radius: 12px;
+}
+  
+a.med-soc {
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+  
+button:hover, a:hover {
+    opacity: 0.9;
+  }
+
+.media-social {
+    display: block;
+}
+
+.img-profile {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.e-mail {
+    text-decoration: none;
+}
+
+.name-institutions {
+    color: #0C0C51;
+    text-decoration: none;
+}
+.attribution {
+    opacity: 0.5;
+}
+
+.role {
+    font-size: 14px;
+    font-style: italic;
+    color: #040438;
+    font-weight: 500;
+}
+

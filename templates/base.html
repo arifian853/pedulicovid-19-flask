@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    {% block head %} {% endblock %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/icon.ico')}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<header>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <a class="navbar-brand" href="/">
+      <img class="img-logo-navbar" src="{{url_for('static', filename='img/logo_web.svg')}}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-item-bg-dr" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link link-0" href="/#tentang">TENTANG</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link link-0 dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            INFORMASI KESEHATAN
+          </a> 
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/#protokol-kesehatan" >Protokol Kesehatan</a>
+            <a class="dropdown-item" href="/#new-normal" > <i>New Normal </i>(kebiasaan baru)</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link link-0" href="/#sejarah-pandemi">SEJARAH</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link link-0" href="/#peran-masyarakat">PERAN MASYARAKAT</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!--END OF NAVBAR-->
+{% block body%}
+
+{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <script>
+      AOS.init({
+        duration: 1500,
+      });
+    </script>
+    
+</html>
+    
